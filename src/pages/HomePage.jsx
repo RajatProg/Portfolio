@@ -1,6 +1,6 @@
 import { AboutSection } from "../components/AboutSection"
 import { ContactSection } from "../components/ContactSection"
-import Experience from "../components/Experience"
+import { Experience } from "../components/Experience"
 import { Footer } from "../components/Footer"
 import { HeroSection } from "../components/HeroSection"
 import { Navbar } from "../components/NavBar"
