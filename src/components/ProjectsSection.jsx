@@ -1,5 +1,10 @@
 import { ArrowRight, ExternalLink, Github, Gitlab } from "lucide-react";
 
+import swipe2 from "../images/swipe_2.png";
+import heart from "../images/heart_attack.png";
+import stock from "../images/stock.png";
+import candy from "../images/candy.png";
+import lrm from "../images/lrm.png";
 
 
 const projects = [
@@ -7,7 +12,7 @@ const projects = [
     id: 1,
     title: "Swipe_In App",
     description: "An App that lets students to track meal swipes, monitor dining hall status, manage memberships, predict future spending for better budget management and many more features.",
-    image: "src/images/swipe_2.png",
+    image: swipe2,
     tags: ["React-Native", "Tensorflow", "DNN", "FastAPI", "Python", "SQL Server", "AWS", "Linux", "JWT"],
     demoUrl: "https://www.youtube.com/watch?v=H8zMV9jdtxM&ab_channel=RajatKumarParida",
     githubUrl: "https://github.com/RajatProg/Swipe_in",
@@ -17,17 +22,17 @@ const projects = [
     id: 2,
     title: "Heart Attack Analysis & Prediction",
     description: "A predictive healthcare solution that uses deep neural networks to analyze patient data and assess heart attack risk, providing early warnings and actionable health insights.",
-    image: "src/images/heart_attack.png",
+    image: heart,
     tags: ["Python", "Tensorflow", "Sklearn", "Matplotlib", "Seaborn"],
     demoUrl: "https://youtu.be/nwgzO5a45VE",
-    githubUrl: "https://github.com/user/project-two",
+    githubUrl: "https://github.com/RajatProg/Heart_Attack_Prediction",
   },
 
   {
     id: 3,
     title: "Stock Market Analysis",
     description: "Analyzed recent stock trends of Microsoft, Apple, Google, and Amazon using Machine Learning models. Trained and tested predictive models to achieve higher accuracy in forecasting stock movements.",
-    image: "src/images/stock.png",
+    image: stock,
     tags: ["Sklearn", "Python", "Matplotlib", "Seaborn"],
     //demoUrl: "https://example.com/demo3",
     githubUrl: "https://github.com/RajatProg/Stock_Market_Prediction",
@@ -37,7 +42,7 @@ const projects = [
     id: 4,
     title: "Candy Store App",
     description: "A React Native Android app that lets users browse and purchase candies online while also showing nearby candy stores for quick pickup and local shopping.",
-    image: "src/images/stock.png",
+    image: candy,
     tags: ["React-Native", "Python", "FastAPI", "MongoDB", "Digital Ocean", "Linux"],
     demoUrl: "https://youtu.be/nwgzO5a45VE",
     githubUrl: "https://github.com/RajatProg/Mobil",
@@ -47,7 +52,7 @@ const projects = [
     id: 5,
     title: "Library Records Management",
     description: "A web application that digitizes library records, automates late-fee calculations, and streamlines daily workflows. It improves efficiency, reduces errors, and provides faster access to records while ensuring reliability and accuracy.",
-    image: "src/images/lrm.png",
+    image: lrm,
     tags: [".NET", "C#", "SQL Server", "Entity Framework", "ASP.NET WebAPI", "Angular", "Azure", "JWT", "Microservices", "NUnit-Moq"],
     //demoUrl: "https://example.com/demo3",
     gitlabUrl: "https://gitlab.com/rajatparida/library-records-management",
