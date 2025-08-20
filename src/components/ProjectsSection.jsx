@@ -37,7 +37,7 @@ const projects = [
 export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-6xl">
         <p className="text-3xl md:text-4xl font-bold mb-4 text-center">
             Featured {""} <span className="text-primary">Projects</span>
           </p>
@@ -64,7 +64,7 @@ export const ProjectsSection = () => {
                   {projects.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 text-xs font-medium border bg-green-700 rounded-full text-secondary-foreground"
+                      className="px-2 py-1 text-xs text-white font-medium border bg-green-700 rounded-full text-secondary-foreground"
                     >
                       {tag}
                     </span>
@@ -72,24 +72,24 @@ export const ProjectsSection = () => {
                 </div>
 
                 <h3 className="text-xl text-green-400 font-semibold mb-1">{projects.title}</h3>
-                <p className="text-muted-foreground text-white hover:text-primary text-sm mb-4">
+                <p className="text-muted-foreground group-hover:text-primary text-sm mb-8">
                   {projects.description}
                 </p>
                 <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
+                  <div className="flex space-x-5 ">
                     <a
                       href={projects.demoUrl}
                       target="_blank"
                       className="text-green-700 hover:text-primary transition-colors duration-300"
                     >
-                      <ExternalLink size={20} />
+                      <ExternalLink size={22} />
                     </a>
                     <a
                       href={projects.githubUrl}
                       target="_blank"
                       className="text-green-700 hover:text-primary transition-colors duration-300"
                     >
-                      <Github size={20} />
+                      <Github size={22} />
                     </a>
                   </div>
                 </div>

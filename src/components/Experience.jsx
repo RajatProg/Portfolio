@@ -150,7 +150,7 @@ export function Experience() {
                           <Briefcase className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-black text-white group-hover:text-green-400 transition-colors duration-300">
+                          <h3 className="text-xl font-black group-hover:text-green-400 transition-colors duration-300">
                             {experience.company}
                           </h3>
                           <div className="flex items-center gap-2 text-green-400 text-sm">
@@ -171,7 +171,7 @@ export function Experience() {
                         </div>
                       </div>
                       {/* Description */}
-                      <div className="text-gray-300 mb-6 leading-relaxed group-hover:text-primary transition-all duration-300">
+                      <div className="mb-6 leading-relaxed group-hover:text-primary transition-all duration-300">
                         {experience.description}
                       </div>
                       {/*Achievements*/}
@@ -185,7 +185,7 @@ export function Experience() {
                             return (
                               <li
                                 key={achindex}
-                                className={`text-gray-300 group-hover:text-primary transition-all text-sm flex items-start gap-3 duration-300`}
+                                className={`group-hover:text-primary transition-all text-sm flex items-start gap-3 duration-300`}
                                 style={{
                                   animationDelay: `${
                                     index * 300 + achindex * 200 + 1500
