@@ -51,6 +51,12 @@ const skills = [
   { name: "CI/CD", level: 92, category: "DevOps" },
   { name: "Git", level: 95, category: "DevOps" },
 
+  // Languages
+  { name: "Python", level: 98, category: "Languages" },
+  { name: "C++", level: 95, category: "Languages" },
+  { name: "C#", level: 95, category: "Languages" },
+  { name: "Java", level: 90, category: "Languages" },
+
 ];
 
 const education = [
@@ -70,8 +76,7 @@ const education = [
   },
 ];
 
-const categories = ["Frontend", "Backend", "DevOps"];
-// }
+const categories = ["Frontend", "Backend", "DevOps" , "Languages"];
 
 export const SkillsSection = () => {
   // Filter skills by category
@@ -159,7 +164,7 @@ export const SkillsSection = () => {
                     className="space-y-2 transition-all duration-1000"
                   >
                     <div className="flex justify-between items-center ">
-                      <span className="text-white font-medium group-hover:text-primary transition-all duration-300">{skills.name}</span>
+                      <span className="font-medium group-hover:text-primary transition-all duration-300">{skills.name}</span>
                       <span className="text-green-400 font-semibold">
                         {skills.level}%
                       </span>
