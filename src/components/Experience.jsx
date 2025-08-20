@@ -1,6 +1,5 @@
 import { Award, Briefcase, Calendar, MapPin } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import { ThemeToggle } from "./ThemeToggle";
 
 export function Experience() {
   const [visibleItems, setVisibleItems] = useState([]);
@@ -144,8 +143,7 @@ export function Experience() {
                     }`}
                   >
                     <div
-                      className={`p-8 rounded-2xl shadow-2xl border duration-500 border-slate-800 over:border-green-500 transition-all transform hover:scale-105
-                      hover:shadow-red-500/20 group bg-slate-800 dark:bg-transparent`}
+                      className={`bg-transparent border backdrop-blur-md p-8 rounded-2xl shadow-2xl duration-500 hover:border-primary transition-all transform hover:scale-105 hover:shadow-red-500/20 group `}
                     >
                       <div className="flex items-center gap-3 mb-6 group-hover:transform group-hover:scale-105 transition-all duration-300">
                         <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300 group-hover:rotate-6">
@@ -164,7 +162,7 @@ export function Experience() {
 
                       {/*Position*/}
                       <div className="mb-4">
-                        <h4 className="text-lg font-semibold text-green-400 mb-2 group-hover:text-green-300 transition-colors duration-300">
+                        <h4 className="text-lg font-semibold text-green-400 mb-2 group-hover:text-primary transition-colors duration-300">
                           {experience.position}
                         </h4>
                         <div className="flex items-center gap-2 text-green-400 text-sm">
@@ -173,12 +171,12 @@ export function Experience() {
                         </div>
                       </div>
                       {/* Description */}
-                      <div className="text-gray-300 mb-6 leading-relaxed group-hover:text-white transition-all duration-300">
+                      <div className="text-gray-300 mb-6 leading-relaxed group-hover:text-primary transition-all duration-300">
                         {experience.description}
                       </div>
                       {/*Achievements*/}
                       <div className="mb-6">
-                        <h5 className="font-semibold text-white mb-3 flex items-center gap-2 group-hover:text-green-400 transition-all duration-300 ">
+                        <h5 className="font-semibold text-green-400 mb-3 flex items-center gap-2 transition-all duration-300 ">
                           <Award className="w-4 h-4 text-green-400" />
                           Key Achievements
                         </h5>
@@ -187,7 +185,7 @@ export function Experience() {
                             return (
                               <li
                                 key={achindex}
-                                className={`text-gray-300 group-hover:text-white transition-all text-sm flex items-start gap-3 duration-300`}
+                                className={`text-gray-300 group-hover:text-primary transition-all text-sm flex items-start gap-3 duration-300`}
                                 style={{
                                   animationDelay: `${
                                     index * 300 + achindex * 200 + 1500
@@ -202,7 +200,19 @@ export function Experience() {
                         </ul>
                       </div>
                       {/* Skills */}
-                      <div className="flex flex-wrap gap-2"></div>
+                      <div className="flex flex-wrap gap-2">
+                        {experience.skills.map((skill, skillIndex) => {
+                          return (
+                            <span
+                              key={skillIndex}
+                              className="bg-green-700 text-white text-xs font-semibold px-3 py-1 rounded-full transition-all duration-300 hover:bg-primary"
+                              style={{ animationDelay: `${index * 300 + skillIndex * 100 + 1800}ms` }}
+                            >
+                              {skill}
+                            </span>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>

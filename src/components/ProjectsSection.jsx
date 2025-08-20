@@ -1,11 +1,13 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
+
+
 const projects = [
   {
     id: 1,
-    title: "Project One",
-    description: "This is a brief description of Project One.",
-    image: "path/to/image1.jpg",
+    title: "Swipe_In App",
+    description: "An App that lets students track meal swipes, check dining hall status, manage memberships and many more in real-time.",
+    image: "src/images/swipe_2.png",
     tags: ["React", "JavaScript", "CSS"],
     demoUrl: "https://example.com/demo1",
     githubUrl: "https://github.com/user/project-one",
@@ -45,17 +47,17 @@ export const ProjectsSection = () => {
           expertise.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {projects.map((projects, key) => (
             <div
               key={key}
-              className="ground bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="ground bg-transparent border backdrop-blur-md p-8 rounded-2xl shadow-2xl duration-500 hover:border-primary transition-all transform hover:scale-105 hover:shadow-red-500/20 group overflow-hidden card-hover"
             >
               <div className="h-48 overflow-hidden">
                 <img
                   src={projects.image}
                   alt={projects.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 "
+                  className="w-full rounded-2xl h-full object-cover transition-transform duration-500 group-hover:scale-110 "
                 />
               </div>
 

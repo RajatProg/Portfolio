@@ -73,7 +73,7 @@ const education = [
   },
 ];
 
-const categories = ["all", "Frontend", "Backend", "DevOps", "Design"];
+const categories = ["Frontend", "Backend", "DevOps", "Design"];
 // }
 
 export const SkillsSection = () => {
@@ -95,7 +95,7 @@ export const SkillsSection = () => {
 
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container backdrop-blur-md mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16">
           {/*Left Column with education*/}
           <div className="transition-all duration-1000">
@@ -111,11 +111,11 @@ export const SkillsSection = () => {
                   <div key={index}
                     className={`border-l-2 border-primary pl-6 relative group transition-all duration-1000`}
                   >
-                    <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full group-hover:scale-125 transition-all duration-300"></div>
+                    <div className="absolute -left-2 top-0 w-4 h-4 bg-green-400 rounded-full group-hover:scale-145 transition-all duration-300"></div>
                     <div className="text-primary-400 text-sm font-semibold mb-2 group-hover:text-primary-300 transition-all duration-300">
                     {edu.year}
                     </div>
-                    <h3 className="text-xl font-white mb-2 text-primary group-hover:text-primary-400 transition-all duration-300">
+                    <h3 className="text-xl font-white mb-2 text-white group-hover:text-green-400 transition-all duration-300">
                       {edu.title}
                     </h3>
                     <p className="text-primary-400 mb-2 group-hover:text-primary transition-all duration-300">
@@ -133,8 +133,8 @@ export const SkillsSection = () => {
 
 
           {/* Right column with skills */}
-          <div className="transition-all duration-1000 delay-300">
-            <div className="mb-12">
+          <div className="transition-all duration-200 delay-300 bg-transparent border backdrop-blur-md p-8 rounded-2xl shadow-2xl transform hover:scale-105 hover:shadow-red-500/20 group ">
+            <div className="mb-8">
               <p className="text-3xl md:text-4xl font-bold mb-4 text-center">
                 My  {" "} <span className="text-primary">Skills</span>
               </p>
@@ -147,8 +147,8 @@ export const SkillsSection = () => {
                 className={cn(
                   "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                   activeCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary/70 text-foreground hover:bd-secondary"
+                    ? "bg-green-700 text-primary-foreground"
+                    : "bg-secondary/70 text-foreground hover:bg-primary"
                 )}
               >
                 {category}
@@ -162,9 +162,9 @@ export const SkillsSection = () => {
                     key={index}
                     className="space-y-2 transition-all duration-1000"
                   >
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center ">
                       <span className="text-white font-medium group-hover:text-primary transition-all duration-300">{skills.name}</span>
-                      <span className="text-primary font-semibold">
+                      <span className="text-green-400 font-semibold">
                         {skills.level}%
                       </span>
                     </div>
