@@ -70,7 +70,7 @@ const education = [
   },
 ];
 
-const categories = ["Frontend", "Backend", "DevOps", "Design"];
+const categories = ["Frontend", "Backend", "DevOps"];
 // }
 
 export const SkillsSection = () => {
