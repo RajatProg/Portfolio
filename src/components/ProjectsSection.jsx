@@ -69,13 +69,13 @@ export const ProjectsSection = () => {
           {projects.map((projects, key) => (
             <div
               key={key}
-              className="ground border backdrop-blur-md p-8 rounded-2xl shadow-2xl duration-500 hover:border-primary transition-all transform hover:scale-105 hover:shadow-red-500/20 group overflow-hidden card-hover"
+              className="ground border backdrop-blur-md p-8 rounded-2xl shadow-2xl duration-300 hover:border-primary transition-all transform hover:scale-105 hover:shadow-red-500/20 group overflow-hidden card-hover"
             >
               <div className="h-48 overflow-hidden">
                 <img
                   src={projects.image}
                   alt={projects.title}
-                  className="w-full rounded-2xl h-full object-cover transition-transform duration-500 group-hover:scale-110 "
+                  className="w-full rounded-2xl h-full object-cover transition-transform duration-300 group-hover:scale-110 "
                 />
               </div>
 
