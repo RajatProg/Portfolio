@@ -1,4 +1,6 @@
 import { Briefcase, Code, User } from "lucide-react";
+import resumeUrl from "../Resume/Full_Stack_Developer.docx";
+
 
 export const AboutSection = () => {
   return (
@@ -21,7 +23,7 @@ export const AboutSection = () => {
                 Get in Touch
               </a>
               <a
-                href="src/Resume/Full_Stack_Developer.docx"
+                href={resumeUrl} download
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 "
               >
                 {" "}
