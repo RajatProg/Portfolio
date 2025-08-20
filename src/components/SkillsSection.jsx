@@ -31,43 +31,40 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "Frontend" },
-  { name: "JavaScript", level: 90, category: "Frontend" },
-  { name: "React", level: 85, category: "Frontend" },
-  { name: "React Native", level: 90, category: "Frontend" },
-  { name: "Angular", level: 85, category: "Frontend" },
+  { name: "HTML/CSS", level: 98, category: "Frontend" },
+  { name: "JavaScript", level: 98, category: "Frontend" },
+  { name: "TypeScript", level: 98, category: "Frontend" },
+  { name: "React", level: 98, category: "Frontend" },
+  { name: "React Native", level: 98, category: "Frontend" },
+  { name: "Angular", level: 95, category: "Frontend" },
 
   // Backend
-  { name: "SQL Server", level: 90, category: "Backend" },
-  { name: "MySQL", level: 85, category: "Backend" },
-  { name: "MongoDB", level: 80, category: "Backend" },
-  { name: "PostgreSQL", level: 75, category: "Backend" },
+  { name: "SQL Server", level: 97, category: "Backend" },
+  { name: "MySQL", level: 97, category: "Backend" },
+  { name: "MongoDB", level: 95, category: "Backend" },
+  { name: "PostgreSQL", level: 95, category: "Backend" },
 
   // DevOps
-  { name: "Docker", level: 80, category: "DevOps" },
-  { name: "Kubernetes", level: 75, category: "DevOps" },
-  { name: "AWS", level: 70, category: "DevOps" },
-  { name: "Azure", level: 70, category: "DevOps" },
-  { name: "CI/CD", level: 75, category: "DevOps" },
-  { name: "Git", level: 90, category: "DevOps" },
+  { name: "Docker", level: 90, category: "DevOps" },
+  { name: "AWS", level: 90, category: "DevOps" },
+  { name: "Azure", level: 90, category: "DevOps" },
+  { name: "CI/CD", level: 92, category: "DevOps" },
+  { name: "Git", level: 95, category: "DevOps" },
 
-  // Design
-  { name: "Figma", level: 85, category: "Design" },
-  { name: "Draw.io", level: 80, category: "Design" },
 ];
 
 const education = [
   {
     year: "2023-2025",
-    title: "Master of Science in Software Engineering",
-    institution: "Midwestern University",
+    title: "Master of Science in Computer Science",
+    institution: "Midwestern State University, Wichita Falls, Texas",
     description:
       "Specializing in advanced software development methodologies and practices.",
   },
   {
     year: "2017-2021",
     title: "Bachelor of Technology in Electronics & Communication Engineering",
-    institution: "Institute of Aeronautical Engineering",
+    institution: "Institute of Aeronautical Engineering, Hyderabad, India",
     description:
       "Focused on electronics and communication systems, with a strong foundation in software development.",
   },

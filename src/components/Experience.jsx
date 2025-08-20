@@ -31,53 +31,71 @@ export function Experience() {
 
   const experiences = [
     {
-      company: "Tech Solutions Inc.",
+      company: "Midwestern State University",
+      position: "Web Developer - Graduate Teaching Assistant",
+      duration: "Jan 2025 - May 2025",
+      location: "Wichita Falls, Texas , USA - 76308",
+      description:
+        "Built and deployed a full-stack dining management platform with real-time transaction tracking, predictive analytics, and role-based dashboards, improving system performance and user engagement.",
+      achievement: [
+        "Improved transaction accuracy and reliability through real-time swipe/Flex Dollar APIs.",
+        "Achieved 96% forecasting accuracy with LSTM-based predictive analytics.",
+        "Increased reporting efficiency by 30% via responsive multi-role dashboards.",
+        "Enhanced reliability with CI/CD pipelines and automated testing."
+      ],
+      skills: ["React Native", "FastAPI", "SQL Server", "Python", "Keras/TensorFlow", "Data Visualization", "Postman (API Testing)", "Linux/DigitalOcean"],
+    },
+    {
+      company: "Midwestern State University",
+      position: "Web Developer - Graduate Teaching Assistant",
+      duration: "Aug 2024 - Dec 2024",
+      location: "Wichita Falls, Texas , USA - 76308",
+      description:
+        "Developed an advanced health analytics solution that predicts patient heart attack risk using machine learning and deep learning models. Enhanced prediction accuracy through feature engineering, EDA, and model optimization.",
+      achievement: [
+        "Achieved 97.1% accuracy with logistic regression on 10,000+ records using 5-fold cross-validation.",
+        "Improved overall model precision by 22% through targeted preprocessing and iterative experimentation.",
+        "Designed and fine-tuned a deep neural network with activation functions, regularization, and dropout for robust predictions."
+      ],
+      skills: ["Python", "scikit-learn", "TensorFlow/Keras", "Pandas", "Matplotlib/Seaborn"],
+    },
+    {
+      company: "Cognizant Technology Solutions",
       position: "Software Engineer",
-      duration: "Jan 2020 - Present",
-      location: "Remote",
+      duration: "Aug 2021 - July 2023",
+      location: "Hyderabad, Telangana , India - 500056",
       description:
-        "Involved in the full software development lifecycle, from requirements gathering to deployment.",
+        "Developed and supported enterprise-grade application with scalable APIs and Angular UIs, ensuring high performance, reliability, and seamless collaboration across cross-functional teams.",
       achievement: [
-        "Implemented a new feature that improved user engagement by 30%",
-        "Reduced application load time by optimizing code and assets",
-        "Received 'Employee of the Month' award for outstanding performance",
+        "Resolved 100+ weekly ServiceNow incidents, reducing P3–P4 resolution times by 40% through efficient root cause analysis.",
+        "Achieved a 98% defect prevention rate by automating NUnit test cases and reinforcing pre-release testing.",
+        "Optimized backend APIs and SQL queries, improving overall application speed and reliability.",
+        "Ensured controlled, high-quality deployments via CI/CD pipelines and Agile sprint collaboration."
       ],
-      skills: ["JavaScript", "React", "Node.js", "CSS", "HTML"],
+      skills: [".NET Core", "Angular", "SQL Server", "NUnit", "Splunk","Auth0", "Jenkins CI/CD", "TFS", "Jira","ServiceNow"],
     },
     {
-      company: "Web Innovations LLC",
-      position: "Frontend Developer",
-      duration: "Jun 2018 - Dec 2019",
-      location: "On-site",
+      company: "Cognizant Technology Solutions",
+      position: "Programmer Analyst",
+      duration: "Feb 2021 - July 2021",
+      location: "Hyderabad, Telangana , India - 500056",
       description:
-        "Focused on building responsive and accessible web applications.",
+        "Developed and deployed a full-stack Library Records Management system to streamline book tracking, late-fee automation, and reporting, improving efficiency and user experience across stakeholders.",
       achievement: [
-        "Improved website performance by 25% through code optimization",
-        "Led a team of 4 developers to create a new design system",
-        "Conducted user research to inform design decisions",
+        "Automated late-fee calculations, reducing manual work and accelerating sprint deliveries by 40%.",
+        "Achieved 95% unit test coverage, cutting post-deployment defects by 40% with strong testing practices.",
+        "Enhanced frontend performance, reducing page load times by 25% for smoother user experience.",
+        "Maintained 99.9% uptime by building microservices on Azure with proactive Splunk monitoring."
       ],
-      skills: ["HTML", "CSS", "JavaScript", "Vue.js", "Accessibility"],
-    },
-    {
-      company: "Creative Agency",
-      position: "UI/UX Designer",
-      duration: "Jan 2017 - May 2018",
-      location: "On-site",
-      description:
-        "Designed user-centered interfaces for web and mobile applications.",
-      achievement: [
-        "Redesigned the company website, resulting in a 40% increase in user engagement",
-        "Conducted usability testing to gather user feedback and improve designs",
-        "Collaborated with developers to implement responsive design",
-      ],
-      skills: ["Figma", "Sketch", "Adobe XD", "InVision", "User Research"],
-    },
+      skills: ["ASP.NET WebAPI & MVC", ".NET Framework",  "Angular", "SQL Server", "NUnit", "Azure", "Splunk", "Microservices"]
+    }
   ];
 
+ 
   return (
     <section
       id="experience"
-      className="py-24 bg-transparent relative overflow-hidden"
+      className="py-15 bg-transparent relative overflow-hidden"
     >
       {/*Animated background*/}
       <div className="absolute inset-0">
@@ -98,7 +116,7 @@ export function Experience() {
             {/* Animate Timeline*/}
             <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-slate-700 rounded-full overflow-hidden">
               <div
-                className={`w-full bg-gradient-to-b from-green-500 via-green-400 to-green-300 rounded-full transition-all duration-900 ease-out`}
+                className={`w-full bg-gradient-to-b from-green-500 via-green-400 to-green-300 rounded-full transition-all duration-300 ease-out`}
               >
                 <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-green-300 to-transparent"></div>
               </div>
@@ -110,7 +128,7 @@ export function Experience() {
                   className={`experience-item relative flex items-center mb-20 ${
                     index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }
-            transition-all duration-1000 ${
+            transition-all duration-300 ${
               visibleItems.includes(index)
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
@@ -143,7 +161,7 @@ export function Experience() {
                     }`}
                   >
                     <div
-                      className={`bg-transparent border backdrop-blur-md p-8 rounded-2xl shadow-2xl duration-500 hover:border-primary transition-all transform hover:scale-105 hover:shadow-red-500/20 group `}
+                      className={`bg-transparent border backdrop-blur-md p-8 rounded-2xl shadow-2xl duration-300 hover:border-primary transition-all transform hover:scale-105 hover:shadow-red-500/20 group `}
                     >
                       <div className="flex items-center gap-3 mb-6 group-hover:transform group-hover:scale-105 transition-all duration-300">
                         <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center group-hover:bg-primary transition-all duration-300 group-hover:rotate-6">
