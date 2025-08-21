@@ -87,7 +87,7 @@ export const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="py-24  relative overflow-hidden"
+      className="py-18  relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -134,7 +134,7 @@ export const SkillsSection = () => {
 
 
           {/* Right column with skills */}
-          <div className="transition-all duration-200 delay-300 bg-transparent border backdrop-blur-md p-8 rounded-2xl shadow-2xl transform hover:scale-105 hover:shadow-red-500/20 group ">
+          <div className="transition-all duration-100 delay-300 bg-transparent border backdrop-blur-md p-8 rounded-2xl shadow-2xl transform hover:scale-105 hover:shadow-red-500/20 group ">
             <div className="mb-15">
               <p className="text-3xl md:text-4xl font-bold text-center">
                 My  {" "} <span className="text-primary">Skills</span>
@@ -146,7 +146,7 @@ export const SkillsSection = () => {
                 key={key}
                 onClick={() => setActiveCategory(category)}
                 className={cn(
-                  "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                  "px-5 py-2 rounded-full transition-colors duration-200 capitalize",
                   activeCategory === category
                     ? "bg-green-700 text-primary-foreground"
                     : "bg-secondary/70 text-foreground hover:bg-primary"

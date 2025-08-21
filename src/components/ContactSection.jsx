@@ -25,21 +25,17 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-24 relative px-4 bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get in <span className="text-primary">Touch</span>
-        </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          I would love to hear from you! Whether you have a question, want to
-          collaborate, or just want to say hi, feel free to reach out.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">
+                <p className="text-3xl md:text-4xl font-bold mb-16 text-center">
+            Get in {""} <span className="text-primary">Touch</span>
+          </p>
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="space-y-15">
+            <h3 className="text-2xl font-semibold">
               {" "}
               Contact Information
             </h3>
 
-            <div className="space-y-6 justify-center">
+            <div className="space-y-10 justify-center">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />{" "}
@@ -84,33 +80,33 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="pt-8">
-              <h4 className="font-medium">Connect With Me</h4>
-              <div className="flex space-x-4 justify-center ">
+            <div className="pt-14">
+              <h4 className="text-2xl font-semibold mb-7 h-12">Connect With Me</h4>
+              <div className="flex space-x-8 justify-center ">
                 <a
                   href="https://www.linkedin.com/in/rajatparida33/"
-                  target="_blank"
+                  target="_blank" 
                 >
-                  <Linkedin />
+                  <Linkedin size={30} />
                 </a>
-                <a href="https://twitter.com/rajatparida33" target="_blank">
-                  <Twitter />
+                <a href="https://twitter.com/rajatparida33" target="_blank" className="">
+                  <Twitter size={30} />
                 </a>
 
                 <a href="https://app.slack.com/client/TBMBG710S/D06E74WJ29Z" target="_blank">
-                  <Slack />
+                  <Slack size={30} />
                 </a>
               </div>
             </div>
           </div>
 
           <div
-            className="bg-card p-8 rounded-lg shadow-xs"
+            className="border-3 p-8 rounded-2xl transition-all duration-100 delay-200 bg-transparent backdrop-blur-md transform border-primary group"
             onSubmit={handlesubmit}
           >
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6 ">
               <div>
                 <label
                   htmlFor="name"
@@ -166,7 +162,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button bg-green-700 w-full flex items-center justify-center gap-2"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}

@@ -62,12 +62,12 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-15 px-4 relative">
+    <section id="projects" className="py-10 px-4 relative">
       <div className="container max-w-7xl">
         <p className="text-3xl md:text-4xl font-bold mb-4 text-center">
             Featured {""} <span className="text-primary">Projects</span>
           </p>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
@@ -133,9 +133,9 @@ export const ProjectsSection = () => {
             </div>
           ))}
         </div>
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            className="px-6 py-2 rounded-full font-medium transition-all w-fit flex items-center mx-auto gap-2 bg-primary text-primary-foreground"
             href="https://github.com/RajatProg"
             target="_blank"
           >
