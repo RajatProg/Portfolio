@@ -19,7 +19,7 @@ export function Experience() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     const timelineElement = document.querySelector(".timeline-item");
@@ -148,7 +148,7 @@ export function Experience() {
                     className={`absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 shadow-lg z-10 ${
                       visibleItems.includes(index) ? "scale-110" : "scale-0"
                     }`}
-                    style={{ transitionDelay: `${index * 300 + 1200}ms` }}
+                    style={{ transitionDelay: `${index * 50 + 100}ms` }}
                   >
                     <div className="absolute inset-0 bg-green-500 rounded-full"></div>
                     <div className="absolute inset-0 bg-green-400 rounded-full"></div>

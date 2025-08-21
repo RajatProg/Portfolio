@@ -1,10 +1,10 @@
 import { Briefcase, Code, User } from "lucide-react";
-import resumeUrl from "../Resume/Full_Stack_Developer.docx";
+import resumeUrl from "../Resume/Full_Stack_Developer_Rajat.docx";
 
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-24 px-4 relative ">
+    <section id="about" className="py-15 px-4 relative ">
       {" "}
       <div className="container mx-auto max-w-5xl ">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
