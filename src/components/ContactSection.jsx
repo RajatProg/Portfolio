@@ -23,7 +23,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative px-4 bg-secondary/30">
+    <section id="contact" className="py-14 relative px-4 bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
                 <p className="text-3xl md:text-4xl font-bold mb-16 text-center">
             Get in {""} <span className="text-primary">Touch</span>
@@ -41,7 +41,7 @@ export const ContactSection = () => {
                   <Mail className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium">Email</h4>
+                  <h4 className="font-medium ">Email</h4>
                   <a
                     href="mailto:rajatkumarparida0105@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors duration-300"
@@ -50,7 +50,7 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-4 ">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />{" "}
                 </div>

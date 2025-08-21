@@ -88,8 +88,8 @@ useEffect(() => {
             <a
               key={key}
               href={item.href}
-              className="text-foreground/80 hover:text-primary 
-                transition-colors duration-300"
+              className=" hover:text-xl hover:text-primary font-medium
+                transition-colors duration-100"
             >
               {item.name}
             </a>

@@ -62,7 +62,7 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-10 px-4 relative">
+    <section id="projects" className="py-13 px-4 relative">
       <div className="container max-w-7xl">
         <p className="text-3xl md:text-4xl font-bold mb-4 text-center">
             Featured {""} <span className="text-primary">Projects</span>

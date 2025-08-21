@@ -95,7 +95,7 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="py-15 bg-transparent relative overflow-hidden"
+      className="py-13 bg-transparent relative overflow-hidden"
     >
       {/*Animated background*/}
       <div className="absolute inset-0">

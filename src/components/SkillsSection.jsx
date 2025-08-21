@@ -1,33 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
-// function skills() {
-//   const [isvisible, setIsVisible] = useState(false);
-//   const [animatedskills, setAnimatedSkills] = useState({});
-
-// useEffect(() => {
-//   const observer = new IntersectionObserver((entry) => {
-//     if (entry.isIntersecting) {
-//       setIsVisible(true);
-//       skills.forEach(
-//         (skill, index) => {
-//           setTimeout(() => {
-//             setAnimatedSkills((prev) => ({
-//               ...prev,
-//               [skill.name]: skill.level,
-//             }));
-//           }, index * 200);
-//         }
-//       );
-//     }
-//   }, { threshold: 0.3 });
-
-//   const element = document.getElementById("skills");
-//   if (element) {
-//     observer.observe(element);
-//     return () => observer.disconnect();
-//   }
-// }, []);
 
 const skills = [
   // Frontend
@@ -87,7 +60,7 @@ export const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="py-18  relative overflow-hidden"
+      className="py-15  relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -134,8 +107,8 @@ export const SkillsSection = () => {
 
 
           {/* Right column with skills */}
-          <div className="transition-all duration-100 delay-300 bg-transparent border backdrop-blur-md p-8 rounded-2xl shadow-2xl transform hover:scale-105 hover:shadow-red-500/20 group ">
-            <div className="mb-15">
+          <div className="transition-all duration-100 delay-300 bg-transparent border backdrop-blur-md p-5 rounded-2xl shadow-2xl transform hover:scale-105 hover:shadow-red-500/20 group ">
+            <div className="mb-10">
               <p className="text-3xl md:text-4xl font-bold text-center">
                 My  {" "} <span className="text-primary">Skills</span>
               </p>
