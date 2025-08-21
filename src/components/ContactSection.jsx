@@ -84,17 +84,17 @@ export const ContactSection = () => {
               <h4 className="text-2xl font-semibold mb-7 h-12">Connect With Me</h4>
               <div className="flex space-x-8 justify-center ">
                 <a
-                  href="https://www.linkedin.com/in/rajatparida33/"
+                  href="https://www.linkedin.com/in/rajatparida33/" className="hover:bg-blue hover:text-blue-500 transition-colors duration-100"
                   target="_blank" 
                 >
                   <Linkedin size={30} />
                 </a>
-                <a href="https://twitter.com/rajatparida33" target="_blank" className="">
+                <a href="https://twitter.com/rajatparida33" target="_blank" className="hover:bg-voilet hover:text-primary transition-colors duration-100">
                   <Twitter size={30} />
                 </a>
 
-                <a href="https://app.slack.com/client/TBMBG710S/D06E74WJ29Z" target="_blank">
-                  <Slack size={30} />
+                <a href="https://app.slack.com/client/TBMBG710S/D06E74WJ29Z" target="_blank" className="hover:bg-blue hover:text-green-400 transition-colors duration-100">
+                  <Slack size={30}  />
                 </a>
               </div>
             </div>
@@ -162,7 +162,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button bg-green-700 w-full flex items-center justify-center gap-2"
+                  "cosmic-button bg-green-700 w-full flex items-center justify-center gap-2 text-primary-foreground"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}

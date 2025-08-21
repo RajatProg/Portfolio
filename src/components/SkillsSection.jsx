@@ -110,7 +110,7 @@ export const SkillsSection = () => {
               {education.map((edu, index) => {
                 return (
                   <div key={index}
-                    className={`border-l-2 border-primary pl-6 relative group transition-all duration-1000`}
+                    className={`border-l-2 border-primary pl-6 relative group transition-all duration-500`}
                   >
                     <div className="absolute -left-2 top-0 w-4 h-4 bg-green-400 rounded-full group-hover:scale-145 transition-all duration-300"></div>
                     <div className="text-lg font-semibold mb-2 group-hover:text-green-400 transition-all duration-300">
