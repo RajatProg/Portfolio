@@ -32,30 +32,32 @@ export function Experience() {
   const experiences = [
     {
       company: "Midwestern State University",
-      position: "Web Developer - Graduate Teaching Assistant",
+      position: "Graduate Teaching Assistant - Web Developer",
       duration: "Jan 2025 - May 2025",
       location: "Wichita Falls, Texas , USA - 76308",
       description:
-        "Built and deployed a full-stack dining management platform with real-time transaction tracking, predictive analytics, and role-based dashboards, improving system performance and user engagement.",
+        "Built and deployed an AI-powered dining management platform with real-time transaction tracking, predictive analytics, and intelligent dashboards, improving operational efficiency and student engagement.",
       achievement: [
-        "Improved transaction accuracy and reliability through real-time swipe/Flex Dollar APIs.",
-        "Achieved 96% forecasting accuracy with LSTM-based predictive analytics.",
-        "Increased reporting efficiency by 30% via responsive multi-role dashboards.",
-        "Enhanced reliability with CI/CD pipelines and automated testing."
+        "Enhanced transaction accuracy through real-time swipe/Flex Dollar APIs with low-latency FastAPI services.",
+        "Developed an LSTM-based deep neural network (DNN) using TensorFlow/Keras, achieving 96% forecasting accuracy for demand prediction and resource optimization.",
+        "Integrated generative AI chatbot (OpenAI API, LangChain) to automate student dining queries (menus, balances, peak hours), reducing manual support load by 40%.",
+        "Increased reporting efficiency by 30% through AI-driven dashboards with natural language summaries for administrators.",
+        "Deployed on AWS with CI/CD pipelines (GitHub Actions, Postman), ensuring scalability, automation, and reliability."
       ],
-      skills: ["React Native", "FastAPI", "SQL Server", "Python", "Keras/TensorFlow", "Data Visualization", "Postman (API Testing)", "Linux/DigitalOcean"],
+      skills: ["React Native", "FastAPI", "SQL Server", "Python", "TensorFlow/Keras", "LangChain/OpenAI API", "Data Visualization", "Postman", "AWS"],
     },
     {
       company: "Midwestern State University",
-      position: "Web Developer - Graduate Teaching Assistant",
+      position: "Graduate Teaching Assistant - Web Developer",
       duration: "Aug 2024 - Dec 2024",
       location: "Wichita Falls, Texas , USA - 76308",
       description:
-        "Developed an advanced health analytics solution that predicts patient heart attack risk using machine learning and deep learning models. Enhanced prediction accuracy through feature engineering, EDA, and model optimization.",
+        "Developed an advanced health analytics solution to predict patient heart attack risk using machine learning and deep neural networks (DNNs). Enhanced prediction accuracy through feature engineering, EDA, and model optimization.",
       achievement: [
-        "Achieved 97.1% accuracy with logistic regression on 10,000+ records using 5-fold cross-validation.",
-        "Improved overall model precision by 22% through targeted preprocessing and iterative experimentation.",
-        "Designed and fine-tuned a deep neural network with activation functions, regularization, and dropout for robust predictions."
+        "Achieved 97.1% accuracy with logistic regression on 10,000+ patient records using 5-fold cross-validation.",
+        "Improved model precision by 22% through targeted feature engineering, preprocessing, and hyperparameter tuning.",
+        "Designed and fine-tuned a deep neural network (DNN) with multiple hidden layers, ReLU activations, dropout, and L2 regularization, achieving robust risk classification performance.",
+        "Applied model evaluation techniques (confusion matrix, ROC-AUC, classification reports) to validate reliability and interpretability."
       ],
       skills: ["Python", "scikit-learn", "TensorFlow/Keras", "Pandas", "Matplotlib/Seaborn"],
     },
@@ -65,29 +67,30 @@ export function Experience() {
       duration: "Aug 2021 - July 2023",
       location: "Hyderabad, Telangana , India - 500056",
       description:
-        "Developed and supported enterprise-grade application with scalable APIs and Angular UIs, ensuring high performance, reliability, and seamless collaboration across cross-functional teams.",
+        "Developed and supported enterprise-grade applications with scalable APIs and Angular UIs, ensuring high performance, reliability, and seamless collaboration across global teams.",
       achievement: [
-        "Resolved 100+ weekly ServiceNow incidents, reducing P3–P4 resolution times by 40% through efficient root cause analysis.",
-        "Achieved a 98% defect prevention rate by automating NUnit test cases and reinforcing pre-release testing.",
-        "Optimized backend APIs and SQL queries, improving overall application speed and reliability.",
-        "Ensured controlled, high-quality deployments via CI/CD pipelines and Agile sprint collaboration."
+        "Resolved 100+ weekly ServiceNow incidents, reducing P3–P4 resolution times by 40% through root-cause analysis and rapid response.",
+        "Achieved 98% defect prevention by automating NUnit test cases and strengthening pre-release QA coverage.",
+        "Optimized backend APIs and SQL queries, improving overall application speed, scalability, and reliability.",
+        "Ensured controlled, high-quality deployments via CI/CD pipelines (Jenkins, TFS) and Agile sprint collaboration.",
+        "Collaborated with DevOps and security teams to integrate Auth0 authentication and monitoring via Splunk, strengthening system security and uptime."
       ],
-      skills: [".NET Core", "Angular", "SQL Server", "NUnit", "Splunk","Auth0", "Jenkins CI/CD", "TFS", "Jira","ServiceNow"],
+      skills: ["NET Core", "Angular", "SQL Server", "NUnit", "Splunk", "Auth0", "Jenkins CI/CD", "TFS", "Jira", "ServiceNow"],
     },
     {
       company: "Cognizant Technology Solutions",
-      position: "Programmer Analyst",
+      position: "Programmer Analyst (Full-Stack Developer)",
       duration: "Feb 2021 - July 2021",
       location: "Hyderabad, Telangana , India - 500056",
       description:
-        "Developed and deployed a full-stack Library Records Management system to streamline book tracking, late-fee automation, and reporting, improving efficiency and user experience across stakeholders.",
+        "Developed and deployed a full-stack Library Records Management system to streamline book tracking, automate late-fee processing, and enhance reporting, improving overall efficiency and user experience across stakeholders.",
       achievement: [
         "Automated late-fee calculations, reducing manual work and accelerating sprint deliveries by 40%.",
-        "Achieved 95% unit test coverage, cutting post-deployment defects by 40% with strong testing practices.",
-        "Enhanced frontend performance, reducing page load times by 25% for smoother user experience.",
-        "Maintained 99.9% uptime by building microservices on Azure with proactive Splunk monitoring."
+        "Achieved 95% unit test coverage, cutting post-deployment defects by 40% with robust NUnit testing practices.",
+        "Enhanced frontend performance, reducing Angular page load times by 25% for smoother user experience.",
+        "Maintained 99.9% uptime by deploying microservices on Azure with proactive monitoring through Splunk."
       ],
-      skills: ["ASP.NET WebAPI & MVC", ".NET Framework",  "Angular", "SQL Server", "NUnit", "Azure", "Splunk", "Microservices"]
+      skills: ["ASP.NET WebAPI & MVC", "NET Framework", "Angular", "SQL Server", "NUnit", "Azure", "Splunk", "Microservices"]
     }
   ];
 
@@ -180,7 +183,7 @@ export function Experience() {
 
                       {/*Position*/}
                       <div className="mb-4">
-                        <h4 className="text-lg font-semibold text-green-400 mb-2 group-hover:text-primary transition-colors duration-300">
+                        <h4 className="text-xl font-semibold text-green-400 mb-2 group-hover:text-primary transition-colors duration-300">
                           {experience.position}
                         </h4>
                         <div className="flex items-center gap-2 text-green-400 text-sm">

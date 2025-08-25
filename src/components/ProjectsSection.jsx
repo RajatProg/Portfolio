@@ -11,9 +11,9 @@ const projects = [
   {
     id: 1,
     title: "Swipe_In App",
-    description: "An App that lets students to track meal swipes, monitor dining hall status, manage memberships, predict future spending for better budget management and many more features.",
+    description: "An AI-powered dining management app that enables students to track meal swipes, monitor dining hall status, manage memberships, and predict future spending patterns using deep neural networks (DNN/LSTM). Integrated generative AI chatbot for student dining queries, enhancing engagement and reducing manual support. Deployed on AWS with Ubuntu Linux for scalability and reliability.",
     image: swipe2,
-    tags: ["React-Native", "Tensorflow", "DNN", "FastAPI", "Python", "SQL Server", "AWS", "Linux", "JWT"],
+    tags: ["React Native", "FastAPI", "Python", "SQL Server","AWS", "Linux", "JWT", "TensorFlow/Keras (DNN, LSTM)"],
     demoUrl: "https://www.youtube.com/watch?v=H8zMV9jdtxM&ab_channel=RajatKumarParida",
     githubUrl: "https://github.com/RajatProg/Swipe_in",
   },
@@ -21,9 +21,9 @@ const projects = [
   {
     id: 2,
     title: "Heart Attack Analysis & Prediction",
-    description: "A predictive healthcare solution that uses deep neural networks to analyze patient data and assess heart attack risk, providing early warnings and actionable health insights.",
+    description: "A predictive healthcare solution that leverages machine learning (logistic regression, scikit-learn) and deep neural networks (TensorFlow/Keras DNN) to assess heart attack risk. Achieved 94% model accuracy on 10,000+ patient records using advanced preprocessing, feature engineering, and cross-validation. Provides early warnings and actionable health insights to support proactive wellness programs.",
     image: heart,
-    tags: ["Python", "Tensorflow", "Sklearn", "Matplotlib", "Seaborn"],
+    tags: ["Python", "TensorFlow/Keras", "scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
     demoUrl: "https://youtu.be/nwgzO5a45VE",
     githubUrl: "https://github.com/RajatProg/Heart_Attack_Prediction",
   },
@@ -31,9 +31,9 @@ const projects = [
   {
     id: 3,
     title: "Stock Market Analysis",
-    description: "Analyzed recent stock trends of Microsoft, Apple, Google, and Amazon using Machine Learning models. Trained and tested predictive models to achieve higher accuracy in forecasting stock movements.",
+    description: "Designed a predictive analytics system to analyze and forecast stock prices of Microsoft, Apple, Google, and Amazon. Conducted time-series analysis with moving averages, daily returns, and correlation matrices to assess volatility, risk, and inter-stock relationships. Built a Linear Regression model with sliding windows (60 days) for Apple price forecasting, achieving an RMSE of 4.93 on validation data. Visualized trends with Matplotlib/Seaborn, providing actionable insights into investment risk and return.",
     image: stock,
-    tags: ["Sklearn", "Python", "Matplotlib", "Seaborn"],
+    tags: ["Python", "scikit-learn", "yfinance", "Pandas", "Matplotlib", "Seaborn", "NumPy"],
     //demoUrl: "https://example.com/demo3",
     githubUrl: "https://github.com/RajatProg/Stock_Market_Prediction",
   },
@@ -41,9 +41,9 @@ const projects = [
   {
     id: 4,
     title: "Candy Store App",
-    description: "A React Native Android app that lets users browse and purchase candies online while also showing nearby candy stores for quick pickup and local shopping.",
+    description: "Developed a React Native Android app enabling users to browse and purchase candies online, with features for locating nearby stores for quick pickup. Integrated a FastAPI backend with MySQL/SQL Server to handle real-time inventory, orders, and payments. Deployed on DigitalOcean (Linux) and validated on Android Studio with device emulators, ensuring smooth UI/UX, secure APIs, and reliable mobile performance.",
     image: candy,
-    tags: ["React-Native", "Python", "FastAPI", "MongoDB", "Digital Ocean", "Linux"],
+    tags: ["React Native", "FastAPI", "Python", "MySQL/SQL Server", "DigitalOcean", "Linux", "Android Studio"],
     demoUrl: "https://youtu.be/nwgzO5a45VE",
     githubUrl: "https://github.com/RajatProg/Mobil",
   },
@@ -51,9 +51,9 @@ const projects = [
   {
     id: 5,
     title: "Library Records Management",
-    description: "A web application that digitizes library records, automates late-fee calculations, and streamlines daily workflows. It improves efficiency, reduces errors, and provides faster access to records while ensuring reliability and accuracy.",
+    description: "Developed a full-stack web application to digitize library operations, automate late-fee calculations, and streamline daily workflows. Built with ASP.NET WebAPI, Angular, and Entity Framework, the system improved efficiency, reduced errors, and provided faster access to records with 99.9% uptime on Azure Cloud. Implemented JWT-based authentication and role-based access control for secure multi-user management. Integrated microservices architecture for scalability and reliability. Ensured quality by achieving 95% NUnit-Moq unit test coverage, reducing post-deployment defects by 40%.",
     image: lrm,
-    tags: [".NET", "C#", "SQL Server", "Entity Framework", "ASP.NET WebAPI", "Angular", "Azure", "JWT", "Microservices", "NUnit-Moq"],
+    tags: [".NET", "C#", "ASP.NET WebAPI", "Angular", "SQL Server", "Entity Framework", "Azure", "Microservices", "NUnit-Moq", "JWT"],
     //demoUrl: "https://example.com/demo3",
     gitlabUrl: "https://gitlab.com/rajatparida/library-records-management",
   },
@@ -84,7 +84,7 @@ export const ProjectsSection = () => {
                 />
               </div>
 
-              <div className="p-6">
+              <div className="p-4">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {projects.tags.map((tag) => (
                     <span
@@ -97,7 +97,7 @@ export const ProjectsSection = () => {
                 </div>
 
                 <h3 className="text-xl text-green-400 font-semibold mb-1">{projects.title}</h3>
-                <p className="text-muted-foreground group-hover:text-primary text-sm mb-8">
+                <p className="text-muted-foreground group-hover:text-primary text-sm mb-8 text-center">
                   {projects.description}
                 </p>
                 <div className="flex justify-between items-center">
@@ -133,9 +133,9 @@ export const ProjectsSection = () => {
             </div>
           ))}
         </div>
-        <div className="text-center mt-16">
+        <div className="text-center mt-28 ">
           <a
-            className="px-6 py-2 rounded-full font-medium transition-all w-fit flex items-center mx-auto gap-2 bg-primary text-primary-foreground"
+            className="px-12 py-3 rounded-full font-medium transition-all w-fit flex items-center mx-auto gap-4 bg-primary text-primary-foreground"
             href="https://github.com/RajatProg"
             target="_blank"
           >
