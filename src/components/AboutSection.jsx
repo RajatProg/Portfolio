@@ -11,20 +11,19 @@ export const AboutSection = () => {
           About <span className="text-primary">Me</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-1 items-center">
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold">Passionate Web Developer</h3>
+          <div className="space-y-6 space-x-7">
+            <h3 className="text-xl font-semibold">Full-Stack Developer with AI Expertise</h3>
             <p className="text-muted-foreground">
-              I am a passionate developer with a love for creating dynamic and
-              user-friendly web applications.
+              I build cloud-native applications that integrate predictive analytics and generative AI, combining full-stack engineering with intelligent automation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-7 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button hover:bg-green-600 bg-transparent border-4 border-green-600">
+            <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center">
+              <a href="#contact" className="cosmic-button hover:bg-green-600 bg-transparent border-4 border-green-600 hover:text-white">
                 {" "}
                 Get in Touch
               </a>
               <a
                 href={resumeUrl} download
-                className="cosmic-button hover:bg-primary bg-transparent border-4 border-primary group-hover:text-primary"
+                className="cosmic-button hover:bg-primary bg-transparent border-4 border-primary group-hover:text-primary  hover:text-white"
               >
                 {" "}
                 Download CV
@@ -42,8 +41,7 @@ export const AboutSection = () => {
                   <h4 className="font-semibold text-lg">Full-Stack Development</h4>
                   <p className="text-muted-foreground">
                     {" "}
-                    I specialize in building responsive and scalable web
-                    applications using modern technologies.
+                    I specialize in building scalable web and mobile applications using React, Angular, .NET Core, and FastAPI, with seamless REST API and database integration.
                   </p>
                 </div>
               </div>
@@ -54,11 +52,10 @@ export const AboutSection = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">User-Centric Design</h4>
                   <p className="text-muted-foreground">
                     {" "}
-                    I specialize in creating user-friendly interfaces and
-                    seamless user experiences.
+                    I integrate predictive analytics (LSTM, forecasting) and generative AI (chatbots, LangChain, NLP pipelines) into applications, making them intelligent and data-driven.
                   </p>
                 </div>
               </div>
@@ -72,9 +69,7 @@ export const AboutSection = () => {
                   <h4 className="font-semibold text-lg">Agile & DevOps</h4>
                   <p className="text-muted-foreground">
                     {" "}
-                    I specialize in overseeing projects from inception to
-                    completion, ensuring they are delivered on time and within
-                    scope.
+                    I deploy and scale applications on AWS, Azure, and DigitalOcean (Ubuntu Linux), while leveraging CI/CD pipelines, monitoring (Splunk), and MLOps practices to ensure automation, reliability, and smooth Agile delivery.
                   </p>
                 </div>
               </div>

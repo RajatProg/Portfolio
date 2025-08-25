@@ -12,23 +12,41 @@ const skills = [
   { name: "Angular", level: 95, category: "Frontend" },
 
   // Backend
+  { name: ".NET Core / ASP.NET Web API", level: 97, category: "Backend" },
+  { name: "Entity Framework", level: 95, category: "Backend" },
   { name: "SQL Server", level: 97, category: "Backend" },
+  { name: "Node.js", level: 97, category: "Backend" },
+  { name: "FastAPI", level: 97, category: "Backend" },
   { name: "MySQL", level: 97, category: "Backend" },
   { name: "MongoDB", level: 95, category: "Backend" },
   { name: "PostgreSQL", level: 95, category: "Backend" },
 
-  // DevOps
-  { name: "Docker", level: 90, category: "DevOps" },
-  { name: "AWS", level: 90, category: "DevOps" },
-  { name: "Azure", level: 90, category: "DevOps" },
-  { name: "CI/CD", level: 92, category: "DevOps" },
-  { name: "Git", level: 95, category: "DevOps" },
 
-  // Languages
-  { name: "Python", level: 98, category: "Languages" },
-  { name: "C++", level: 95, category: "Languages" },
-  { name: "C#", level: 95, category: "Languages" },
-  { name: "Java", level: 90, category: "Languages" },
+  // DevOps
+  { name: "Docker", level: 92, category: "Cloud & DevOps" },
+  { name: "AWS(EC2,RDS,S3, ROUTE 53)", level: 92, category: "Cloud & DevOps" },
+  { name: "Azure", level: 90, category: "Cloud & DevOps" },
+  { name: "CI/CD", level: 93, category: "Cloud & DevOps" },
+  { name: "Splunk", level: 90, category: "Cloud & DevOps" },
+  { name: "Git", level: 95, category: "Cloud & DevOps" },
+
+  // Programming Languages
+  { name: "Python", level: 98, category: "Programming Languages" },
+  { name: "C++", level: 95, category: "Programming Languages" },
+  { name: "C#", level: 95, category: "Programming Languages" },
+  { name: "Java", level: 91, category: "Programming Languages" },
+  { name: "SQL", level: 97, category: "Programming Languages" },
+
+// AI/ML
+
+  { name: "TensorFlow", level: 95, category: "AI/ML" },
+  { name: "PyTorch", level: 95, category: "AI/ML" },
+  { name: "scikit-learn", level: 93, category: "AI/ML" },
+  { name: "Keras", level: 92, category: "AI/ML" },
+  { name: "Natural Language Processing", level: 90, category: "AI/ML" },
+  { name: "Generative AI (LLMs, LangChain, OpenAI API)", level: 92, category: "AI/ML" },
+  { name: "Predictive Analysis(LSTM,DNN, Logistic Regression)", level: 92, category: "AI/ML" },
+
 
 ];
 
@@ -38,18 +56,18 @@ const education = [
     title: "Master of Science in Computer Science",
     institution: "Midwestern State University, Wichita Falls, Texas",
     description:
-      "Specializing in advanced software development methodologies and practices.",
+      "Focused on AI/ML, full-stack development, cloud computing, and advanced software engineering.",
   },
   {
     year: "2017-2021",
     title: "Bachelor of Technology in Electronics & Communication Engineering",
     institution: "Institute of Aeronautical Engineering, Hyderabad, India",
     description:
-      "Focused on electronics and communication systems, with a strong foundation in software development.",
+      "Built a strong foundation in algorithms, data structures, and system design, with hands-on projects in software development and communication systems.",
   },
 ];
 
-const categories = ["Frontend", "Backend", "DevOps" , "Languages"];
+const categories = ["Programming Languages","Frontend", "Backend", "Cloud & DevOps" , "AI/ML"];
 
 export const SkillsSection = () => {
   // Filter skills by category
@@ -71,7 +89,7 @@ export const SkillsSection = () => {
       </div>
 
       <div className="container backdrop-blur-md mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-10">
           {/*Left Column with education*/}
           <div className="transition-all duration-100">
             <div className="mb-15">

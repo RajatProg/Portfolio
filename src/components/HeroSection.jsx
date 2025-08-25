@@ -17,7 +17,7 @@ export const HeroSection = () => {
                     <span className="text-gradient opacity-0 ml-1 animate-fade-in-delay-3">{" "} Parida</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">{" "} I’m a Software Engineer with 4+ years of experience building AI-powered, cloud-native web and mobile applications. My expertise spans full-stack development (React, Angular, .NET Core, FastAPI) and applied AI/ML (predictive analytics, LSTM forecasting, generative AI chatbots, LangChain). I specialize in deploying scalable solutions on AWS and Azure with CI/CD pipelines, ensuring reliability and business impact. What drives me is combining deep technical knowledge with practical AI applications that help organizations make smarter decisions and deliver better user experiences.</p>
+                <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">{" "} I'm a Software Engineer with 4+ years of experience building AI-powered, cloud-native web and mobile applications. Skilled in React, Angular, .NET Core, and FastAPI, I specialize in creating scalable full-stack solutions integrated with predictive and generative AI. From LSTM forecasting models to AI-driven chatbots, I design intelligent systems deployed on AWS and Azure that deliver real-world business impact and seamless user experiences.</p>
                 <div className="pt-4 opacity-0 animate-fade-in-delay-4">
                     <a href="#projects" className="cosmic-button hover:bg-primary bg-transparent border-4 border-primary group-hover:text-primary-button ">View My Work</a>
                 </div>
