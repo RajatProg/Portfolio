@@ -135,7 +135,7 @@ export const ProjectsSection = () => {
         </div>
         <div className="text-center mt-28 ">
           <a
-            className="px-12 py-3 rounded-full font-medium transition-all w-fit flex items-center mx-auto gap-4 bg-primary text-primary-foreground"
+            className="px-12 py-3 rounded-full font-medium transition-all w-fit flex items-center mx-auto gap-4 bg-primary text-primary-foreground hover:scale-110 duration-200 border-4 hover:border-green-700"
             href="https://github.com/RajatProg"
             target="_blank"
           >

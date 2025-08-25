@@ -1,5 +1,5 @@
 import { Briefcase, Code, User } from "lucide-react";
-import resumeUrl from "../Resume/Full_Stack_Developer_Rajat.docx";
+import resumeUrl from "../Resume/Software_Engineer_Rajat.docx";
 
 
 export const AboutSection = () => {
