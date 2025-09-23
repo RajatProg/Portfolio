@@ -8,25 +8,25 @@ export const ThemeToggle = () => {
 
     useEffect(() => {
         const storedTheme = localStorage.getItem('theme');
-        if (storedTheme == 'light') {
+        if (storedTheme == 'dark') {
             setIsDarkMode(false);
-            document.documentElement.classList.add('light');
+            document.documentElement.classList.add('dark');
         }
         else {
-            localStorage.setItem('theme', 'dark');
+            localStorage.setItem('theme', 'light');
             setIsDarkMode(true);
         }
     }, []);
 
     const toggleTheme = () => {
         if (isDarkMode) {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
+            document.documentElement.classList.remove('light');
+            localStorage.setItem('theme', 'dark');
             setIsDarkMode(false);
 
         } else {
-            document.documentElement.classList.add('light');
-            localStorage.setItem('theme', 'dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'light');
             setIsDarkMode(true);
         }
     };
