@@ -47,9 +47,8 @@ export const ThemeToggle = () => {
       {/* knob */}
       <span
         className={cn(
-          "transition-transform duration-300",
           "absolute top-0.5 left-0.5 w-7 h-7 rounded-full bg-white shadow-md",
-          
+          "transition-transform duration-300",        
           isDarkMode ? "translate-x-8" : "translate-x-0"
         )}
       />
