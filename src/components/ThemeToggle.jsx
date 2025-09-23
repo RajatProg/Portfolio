@@ -39,14 +39,16 @@ export const ThemeToggle = () => {
       )}
     >
       {/* icons inside track */}
-      <Sun className="h-4 w-4 text-yellow-400" />
       <Moon className="h-4 w-4 text-blue-900" />
+      <Sun className="h-4 w-4 text-yellow-400" />
+      
 
       {/* knob */}
       <span
         className={cn(
-          "absolute top-0.5 left-0.5 w-7 h-7 rounded-full bg-white shadow-md",
           "transition-transform duration-300",
+          "absolute top-0.5 left-0.5 w-7 h-7 rounded-full bg-white shadow-md",
+          
           isDarkMode ? "translate-x-8" : "translate-x-0"
         )}
       />
