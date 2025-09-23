@@ -39,8 +39,9 @@ export const ThemeToggle = () => {
       )}
     >
       {/* icons inside track */}
-      <Moon className="h-4 w-4 text-blue-900" />
       <Sun className="h-4 w-4 text-yellow-400" />
+      <Moon className="h-4 w-4 text-blue-900" />
+      
       
 
       {/* knob */}
