@@ -74,7 +74,7 @@ export const ContactSection = () => {
                     href="https://www.google.com/maps/place/Your+Location"
                     className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
-                    New York, USA
+                    Wichita Falls, Texas, USA
                   </a>
                 </div>
               </div>
