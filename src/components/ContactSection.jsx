@@ -8,19 +8,38 @@ import {
   Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef(null);
+  const [status, setStatus] = useState(null);
 
-  const handlesubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    if (!formRef.current) return;
     setIsSubmitting(true);
-    setTimeout(() => {
-      window.alert("Message sent successfully!");
-      setIsSubmitting(false);
-    }, 1500);
+    setStatus(null);
+    emailjs.sendForm(
+  import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  formRef.current,
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+).then(() => {
+        setStatus("Message sent successfully!");
+        if (formRef.current && typeof formRef.current.reset === "function") {
+          formRef.current.reset();
+        }
+      })
+      .catch((error) => {
+        console.error("Email error:", error);
+        setStatus("Failed to send message. Please try again later.");
+      })
+      .finally(() => setIsSubmitting(false));
   };
+
+  
 
   return (
     <section id="contact" className="py-14 relative px-4 bg-secondary/30">
@@ -84,35 +103,41 @@ export const ContactSection = () => {
               <h4 className="text-2xl font-semibold mb-7 h-12">Connect With Me</h4>
               <div className="flex space-x-8 justify-center ">
                 <a
-                  href="https://www.linkedin.com/in/rajatparida33/" className="hover:bg-blue hover:text-blue-500 transition-colors duration-100"
-                  target="_blank" 
+                  href="https://www.linkedin.com/in/rajatparida33/"
+                  className="hover:bg-blue hover:text-blue-500 transition-colors duration-100"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <Linkedin size={30} />
                 </a>
-                <a href="https://twitter.com/rajatparida33" target="_blank" className="hover:bg-voilet hover:text-primary transition-colors duration-100">
+                <a
+                  href="https://twitter.com/rajatparida33"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:bg-voilet hover:text-primary transition-colors duration-100"
+                >
                   <Twitter size={30} />
                 </a>
 
-                <a href="https://app.slack.com/client/TBMBG710S/D06E74WJ29Z" target="_blank" className="hover:bg-blue hover:text-green-400 transition-colors duration-100">
-                  <Slack size={30}  />
+                <a
+                  href="https://app.slack.com/client/TBMBG710S/D06E74WJ29Z"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:bg-blue hover:text-green-400 transition-colors duration-100"
+                >
+                  <Slack size={30} />
                 </a>
               </div>
             </div>
           </div>
 
-          <div
-            className="border-3 p-8 rounded-2xl transition-all duration-100 delay-200 bg-transparent backdrop-blur-md transform border-primary group"
-            onSubmit={handlesubmit}
-          >
+          <div className="border-3 p-8 rounded-2xl transition-all duration-100 delay-200 bg-transparent backdrop-blur-md transform border-primary group">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
-            <form className="space-y-6 ">
+            {/* Moved onSubmit to form */}
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Your Name
                 </label>
                 <input
@@ -124,12 +149,9 @@ export const ContactSection = () => {
                   placeholder="Your Name"
                 />
               </div>
+
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Email
                 </label>
                 <input
@@ -141,12 +163,9 @@ export const ContactSection = () => {
                   placeholder="Your Email"
                 />
               </div>
+
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {" "}
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
                   Your Message
                 </label>
                 <textarea
@@ -155,6 +174,7 @@ export const ContactSection = () => {
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Your Message"
+                  rows="5"
                 />
               </div>
 
@@ -162,16 +182,27 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button bg-green-700 w-full flex items-center justify-center gap-2 text-primary-foreground"
+                  "cosmic-button bg-green-700 w-full flex items-center justify-center gap-2 text-primary-foreground",
+                  isSubmitting && "opacity-70 cursor-not-allowed"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
               </button>
+
+              {status && (
+                <p
+                  className={`mt-3 text-center ${
+                    status.startsWith("✅") ? "text-green-400" : "text-red-400"
+                  }`}
+                >
+                  {status}
+                </p>
+              )}
             </form>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
