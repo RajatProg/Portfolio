@@ -17,7 +17,7 @@ export const HeroSection = () => {
                     <span className="text-gradient opacity-0 ml-1 animate-fade-in-delay-3">{" "} Parida</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">{" "} I am a Software Engineer with 4+ years of experience building cloud-native web and mobile applications with embedded AI and machine learning systems. I specialize in full-stack development using React, Angular, .NET Core, and FastAPI, and in deploying predictive and generative AI models in production. My work includes LSTM-based forecasting pipelines, AI-powered chatbots, and data-intensive backend services deployed on AWS and Azure to support scalable, real-world decision and operational workflows.</p>
+                <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">{" "} I am a Software Engineer with 5+ years of experience building cloud-native web and mobile applications with embedded AI and machine learning systems. I specialize in full-stack development using React, Angular, .NET Core, and FastAPI, and in deploying predictive and generative AI models in production. My work includes LSTM-based forecasting pipelines, AI-powered chatbots, and data-intensive backend services deployed on AWS and Azure to support scalable, real-world decision and operational workflows.</p>
                 <div className="pt-4 opacity-0 animate-fade-in-delay-4">
                     <a href="#projects" className="cosmic-button hover:bg-primary bg-transparent border-4 border-primary group-hover:text-primary-button ">View My Work</a>
                 </div>
