@@ -133,17 +133,16 @@ function ExperienceCard({ experience, index }) {
   return (
     <div
       ref={ref}
-      className={`relative flex items-center mb-16 ${
-        isEven ? "md:flex-row" : "md:flex-row-reverse"
-      }`}
+      className={`relative flex items-center mb-16 ${isEven ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
       style={{
         // Single transform source — no Tailwind/inline conflict
         opacity: visible ? 1 : 0,
         transform: visible
           ? "translateY(0)"
           : isEven
-          ? "translateX(-30px) translateY(16px)"
-          : "translateX(30px) translateY(16px)",
+            ? "translateX(-30px) translateY(16px)"
+            : "translateX(30px) translateY(16px)",
         // Reduced delay, shorter duration
         transition: `opacity 0.45s ease ${index * 120}ms, transform 0.45s ease ${index * 120}ms`,
         willChange: "transform, opacity",
@@ -171,9 +170,9 @@ function ExperienceCard({ experience, index }) {
             transition-transform duration-300
             group
           "
-          // NO backdrop-blur — removed entirely, was the main GPU killer
-          // NO shadow transition — shadows trigger repaints
-          // Only transition: transform — stays on compositor thread
+        // NO backdrop-blur — removed entirely, was the main GPU killer
+        // NO shadow transition — shadows trigger repaints
+        // Only transition: transform — stays on compositor thread
         >
           {/* Header */}
           <div className="flex items-center gap-3 mb-6">
@@ -197,7 +196,7 @@ function ExperienceCard({ experience, index }) {
               {experience.position}
             </h4>
             <n>
-              
+
             </n>
             <div className="flex items-center gap-2 text-green-400 text-sm">
               <MapPin className="w-4 h-4" />
@@ -206,26 +205,25 @@ function ExperienceCard({ experience, index }) {
           </div>
 
           {/* Description */}
-          <p className="mb-6 text-sm leading-relaxed text-slate-300">
+          <p className="mb-6 text-sm leading-relaxed text-slate-300 text-left">
             {experience.description}
           </p>
 
           {/* Achievements */}
           <div className="mb-6">
-            <h5 className="font-semibold text-green-400 mb-3 flex items-center gap-2">
+            <h5 className="font-semibold text-green-400 mb-3 flex items-center gap-2 text-left">
               <Award className="w-4 h-4" />
               Key Achievements
             </h5>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-left">
               {experience.achievement.map((achv, i) => (
-                <li key={i} className="text-sm flex items-start gap-3 text-slate-300">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0" />
+                <li key={i} className="text-sm flex items-start gap-3 text-slate-300 text-left">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0 text-left" />
                   {achv}
                 </li>
               ))}
             </ul>
           </div>
-
           {/* Skills */}
           <div className="flex flex-wrap gap-2">
             {experience.skills.map((skill, i) => (
