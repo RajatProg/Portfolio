@@ -1,5 +1,5 @@
 import { Briefcase, Code, User } from "lucide-react";
-import resumeUrl from "../Resume/Software_Engineer_Rajat.docx";
+import resumeUrl from "../Resume/Software_Engineer_Rajat.pdf";
 
 
 export const AboutSection = () => {
@@ -12,9 +12,11 @@ export const AboutSection = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-1 items-center">
           <div className="space-y-6 space-x-7">
-            <h3 className="text-xl font-semibold">Full-Stack Developer with AI Expertise</h3>
+            <h3 className="text-xl font-semibold">
+              Full-Stack Software Engineer | AI & .NET Specialist
+            </h3>
             <p className="text-muted-foreground">
-              I build cloud-native applications that integrate predictive analytics and generative AI, combining full-stack engineering with intelligent automation.
+              4+ years building production-grade full-stack applications and AI-powered systems across fintech, healthcare, and SaaS domains. I specialize in .NET Core, Python, React Native, and cloud-native infrastructure on AWS and Azure — and I've shipped real products that real users depend on, including a cross-platform dining intelligence platform serving thousands of students and a production RAG assistant that cut operational workload by 40%. I bring engineering depth across the full stack and an AI-first mindset to every problem I work on.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center">
               <a href="#contact" className="cosmic-button hover:bg-green-600 bg-transparent border-4 border-green-600 hover:text-white">
