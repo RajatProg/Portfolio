@@ -217,8 +217,8 @@ function ExperienceCard({ experience, index }) {
             </h5>
             <ul className="space-y-2 text-left">
               {experience.achievement.map((achv, i) => (
-                <li key={i} className="text-sm flex items-start gap-3 text-slate-300 text-left">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0 text-left" />
+                <li key={i} className="text-sm flex items-start gap-3 text-slate-300 text-align: center">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0 text-align: center" />
                   {achv}
                 </li>
               ))}
