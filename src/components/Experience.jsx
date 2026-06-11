@@ -195,10 +195,10 @@ function ExperienceCard({ experience, index }) {
             <h4 className="text-xl font-semibold text-green-400 mb-1 group-hover:text-primary transition-colors duration-300">
               {experience.position}
             </h4>
-            
+
             <br>
             </br>
-            
+
             <div className="flex items-center gap-2 text-green-400 text-sm">
               <MapPin className="w-4 h-4" />
               {experience.location}
@@ -264,8 +264,13 @@ export function Experience() {
         <div className="max-w-5xl mx-auto">
           <div className="relative">
             {/* Static timeline line — no animation needed */}
-            <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-green-500 via-green-400/60 to-transparent rounded-full" />
-
+            <div
+              className="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-5 h-5 bg-green-500 rounded-full border-4 border-slate-900 z-10 top-8"
+              style={{
+                transform: `translateX(-50%) scale(${visible ? 1 : 0})`,
+                transition: `transform 0.3s ease ${index * 120 + 200}ms`,
+              }}
+            />
             {experiences.map((experience, index) => (
               <ExperienceCard
                 key={index}
