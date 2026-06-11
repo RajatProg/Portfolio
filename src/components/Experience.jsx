@@ -1,6 +1,7 @@
 import { Award, Briefcase, Calendar, MapPin } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
+// Moved outside component — was being recreated on every render
 const experiences = [
   {
     company: "Asuitech Solutions Inc.",
@@ -104,151 +105,35 @@ const experiences = [
   },
 ];
 
-// Isolated card component so IntersectionObserver targets individual refs
-// instead of querying the DOM with querySelector (which is slow)
-function ExperienceCard({ experience, index }) {
-  const [visible, setVisible] = useState(false);
-  const ref = useRef(null);
+export function Experience() {
+  const [visibleItems, setVisibleItems] = useState([]);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect(); // stop watching once visible — no point continuing
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.dataset.index);
+            if (!isNaN(index)) {
+              setVisibleItems((prev) => [...new Set([...prev, index])]);
+            }
+          }
+        });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.1 }
     );
 
-    observer.observe(el);
+    const experienceItems = document.querySelectorAll(".experience-item");
+    experienceItems.forEach((item) => observer.observe(item));
     return () => observer.disconnect();
   }, []);
 
-  const isEven = index % 2 === 0;
-
-  return (
-    <div
-      ref={ref}
-      className={`relative flex items-center mb-16 ${isEven ? "md:flex-row" : "md:flex-row-reverse"
-        }`}
-      style={{
-        // Single transform source — no Tailwind/inline conflict
-        opacity: visible ? 1 : 0,
-        transform: visible
-          ? "translateY(0)"
-          : isEven
-            ? "translateX(-30px) translateY(16px)"
-            : "translateX(30px) translateY(16px)",
-        // Reduced delay, shorter duration
-        transition: `opacity 0.45s ease ${index * 120}ms, transform 0.45s ease ${index * 120}ms`,
-        willChange: "transform, opacity",
-      }}
-    >
-      {/* Timeline dot */}
-      <div
-        className="absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-green-500 rounded-full border-4 border-slate-900 z-10 top-8"
-        style={{
-          transform: `translateX(-50%) scale(${visible ? 1 : 0})`,
-          transition: `transform 0.3s ease ${index * 120 + 200}ms`,
-        }}
-      />
-
-      {/* Card */}
-      <div
-        className={`ml-20 md:ml-0 md:w-1/2 ${isEven ? "md:pr-12" : "md:pl-12"}`}
-      >
-        <div
-          className="
-            border border-slate-700 rounded-2xl p-8
-            bg-slate-900/80
-            hover:border-primary
-            hover:scale-[1.02]
-            transition-transform duration-300
-            group
-          "
-        // NO backdrop-blur — removed entirely, was the main GPU killer
-        // NO shadow transition — shadows trigger repaints
-        // Only transition: transform — stays on compositor thread
-        >
-          {/* Header */}
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-300">
-              <Briefcase className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h3 className="text-xl font-black group-hover:text-green-400 transition-colors duration-300">
-                {experience.company}
-              </h3>
-              <div className="flex items-center gap-2 text-green-400 text-sm">
-                <Calendar className="w-4 h-4" />
-                {experience.duration}
-              </div>
-            </div>
-          </div>
-
-          {/* Position */}
-          <div className="mb-4">
-            <h4 className="text-xl font-semibold text-green-400 mb-1 group-hover:text-primary transition-colors duration-300">
-              {experience.position}
-            </h4>
-
-            <br>
-            </br>
-
-            <div className="flex items-center gap-2 text-green-400 text-sm">
-              <MapPin className="w-4 h-4" />
-              {experience.location}
-            </div>
-          </div>
-
-          {/* Description */}
-          <p className="mb-6 text-sm leading-relaxed text-slate-300 text-left">
-            {experience.description}
-          </p>
-
-          {/* Achievements */}
-          <div className="mb-6">
-            <h5 className="font-semibold text-green-400 mb-3 flex items-center gap-2 text-left">
-              <Award className="w-4 h-4" />
-              Key Achievements
-            </h5>
-            <ul className="space-y-2 text-left">
-              {experience.achievement.map((achv, i) => (
-                <li key={i} className="text-sm flex items-start gap-3 text-slate-300 text-left">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0 text-left" />
-                  {achv}
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* Skills */}
-          <div className="flex flex-wrap gap-2">
-            {experience.skills.map((skill, i) => (
-              <span
-                key={i}
-                className="bg-green-700/80 text-white text-xs font-semibold px-3 py-1 rounded-full hover:bg-primary transition-colors duration-200"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export function Experience() {
   return (
     <section
       id="experience"
       className="py-20 bg-transparent relative overflow-hidden"
     >
-      {/* Lightweight decorative background — no blur filters */}
+      {/* Background — removed blur-3xl, too expensive */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute top-20 left-10 w-72 h-72 bg-green-900/10 rounded-full" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-900/10 rounded-full" />
@@ -256,23 +141,143 @@ export function Experience() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <p className="text-3xl md:text-4xl font-bold mb-4 text-center">
             Work <span className="text-primary">Experience</span>
-          </h2>
+          </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
           <div className="relative">
-            {/* Static timeline line — no animation needed */}
+
+            {/* Timeline line */}
             <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-green-500 via-green-400/60 to-transparent rounded-full" />
 
-            {experiences.map((experience, index) => (
-              <ExperienceCard
-                key={index}
-                experience={experience}
-                index={index}
-              />
-            ))}
+            {experiences.map((experience, index) => {
+              const isVisible = visibleItems.includes(index);
+              const isEven = index % 2 === 0;
+
+              return (
+                <div
+                  key={index}
+                  className={`experience-item relative flex items-center mb-20 ${
+                    isEven ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
+                  data-index={index}
+                  style={{
+                    // FIX: single transform source — no Tailwind/inline conflict
+                    opacity: isVisible ? 1 : 0,
+                    transform: isVisible
+                      ? "translateY(0)"
+                      : isEven
+                      ? "translateX(-40px) translateY(16px)"
+                      : "translateX(40px) translateY(16px)",
+                    // FIX: was index*300+800ms — card 5 waited 2300ms to start
+                    transition: `opacity 0.4s ease ${index * 150}ms, transform 0.4s ease ${index * 150}ms`,
+                    willChange: "transform, opacity",
+                  }}
+                >
+                  {/* Timeline dot */}
+                  {/* FIX: wrapper handles md:left-1/2 positioning */}
+                  {/* inner div handles scale — no transform conflict */}
+                  <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 z-10">
+                    <div
+                      className="w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 shadow-lg transition-transform duration-300"
+                      style={{
+                        transform: `scale(${isVisible ? 1.1 : 0})`,
+                        transitionDelay: `${index * 50 + 100}ms`,
+                        willChange: "transform",
+                      }}
+                    >
+                      <div className="absolute inset-0 bg-green-500 rounded-full" />
+                      <div className="absolute inset-0 bg-green-400 rounded-full" />
+                    </div>
+                  </div>
+
+                  {/* Content card */}
+                  <div
+                    className={`ml-20 md:ml-0 md:w-1/2 ${
+                      isEven ? "md:pr-12" : "md:pl-12"
+                    }`}
+                  >
+                    <div
+                      className="border border-slate-700 p-8 rounded-2xl shadow-2xl
+                        bg-slate-900/80
+                        hover:border-primary
+                        hover:scale-[1.02]
+                        transition-transform duration-300
+                        group"
+                      // FIX: removed backdrop-blur-md — biggest GPU killer
+                      // FIX: removed transition-all — only transition-transform now
+                      // FIX: removed hover:shadow-red-500/20 — shadow transitions repaint
+                    >
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-300 group-hover:rotate-6">
+                          <Briefcase className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="text-left">
+                          <h3 className="text-xl font-black group-hover:text-green-400 transition-colors duration-300">
+                            {experience.company}
+                          </h3>
+                          <div className="flex items-center gap-2 text-green-400 text-sm">
+                            <Calendar className="w-4 h-4" />
+                            {experience.duration}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Position */}
+                      <div className="mb-4 text-left">
+                        <h4 className="text-xl font-semibold text-green-400 mb-2 group-hover:text-primary transition-colors duration-300">
+                          {experience.position}
+                        </h4>
+                        <div className="flex items-center gap-2 text-green-400 text-sm">
+                          <MapPin className="w-4 h-4" />
+                          {experience.location}
+                        </div>
+                      </div>
+
+                      {/* Description */}
+                      <div className="mb-6 leading-relaxed text-sm text-slate-300 text-left">
+                        {experience.description}
+                      </div>
+
+                      {/* Achievements */}
+                      <div className="mb-6">
+                        <h5 className="font-semibold text-green-400 mb-3 flex items-center gap-2 text-left">
+                          <Award className="w-4 h-4 text-green-400" />
+                          Key Achievements
+                        </h5>
+                        {/* FIX: removed animationDelay — no animation property was set, wasted computation */}
+                        <ul className="space-y-2 text-left">
+                          {experience.achievement.map((achv, achindex) => (
+                            <li
+                              key={achindex}
+                              className="text-sm flex items-start gap-3 text-slate-300"
+                            >
+                              <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0" />
+                              {achv}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Skills */}
+                      {/* FIX: removed animationDelay — no animation property was set */}
+                      <div className="flex flex-wrap gap-2">
+                        {experience.skills.map((skill, skillIndex) => (
+                          <span
+                            key={skillIndex}
+                            className="bg-green-700 text-white text-xs font-semibold px-3 py-1 rounded-full hover:bg-primary transition-colors duration-200"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
