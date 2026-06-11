@@ -264,7 +264,7 @@ export function Experience() {
         <div className="max-w-5xl mx-auto">
           <div className="relative">
             {/* Static timeline line — no animation needed */}
-            <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 top-0 w-0.5 h-full bg-gradient-to-b from-green-500 via-green-400/60 to-transparent rounded-full" />
+            <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 w-0.5 h-full bg-gradient-to-b from-green-500 via-green-400/60 to-transparent rounded-full" />
 
             {experiences.map((experience, index) => (
               <ExperienceCard
