@@ -196,6 +196,9 @@ function ExperienceCard({ experience, index }) {
             <h4 className="text-xl font-semibold text-green-400 mb-1 group-hover:text-primary transition-colors duration-300">
               {experience.position}
             </h4>
+            <n>
+              
+            </n>
             <div className="flex items-center gap-2 text-green-400 text-sm">
               <MapPin className="w-4 h-4" />
               {experience.location}
