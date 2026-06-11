@@ -90,10 +90,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium">Location</h4>
                   <a
-                    href="https://www.google.com/maps/place/Your+Location"
+                    href="https://maps.app.goo.gl/KkJpbWcZ2p7nRozu9"
                     className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
-                    Wichita Falls, Texas, USA
+                    Houston, Texas, USA
                   </a>
                 </div>
               </div>

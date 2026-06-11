@@ -30,72 +30,107 @@ export function Experience() {
   }, []);
 
   const experiences = [
-    {
-      company: "Midwestern State University",
-      position: "Graduate Teaching Assistant - Web Developer",
-      duration: "Jan 2025 - May 2025",
-      location: "Wichita Falls, Texas , USA - 76308",
-      description:
-        "Built and deployed an AI-powered dining management platform with real-time transaction tracking, predictive analytics, and intelligent dashboards, improving operational efficiency and student engagement.",
-
-      achievement: [
-        "Enhanced transaction accuracy through real-time swipe/Flex Dollar APIs with low-latency FastAPI services.",
-        "Developed an LSTM-based deep neural network using TensorFlow/Keras, achieving strong forecasting performance for demand prediction and resource optimization.",
-        "Integrated a generative AI chatbot (OpenAI API, LangChain) to automate student dining queries (menus, balances, peak hours), reducing manual support load by 40%.",
-        "Increased reporting efficiency by 30% through AI-driven dashboards with LLM-generated natural language summaries for administrators.",
-        "Deployed on AWS with CI/CD pipelines (GitHub Actions, Postman), ensuring scalability, automation, and reliability."
-      ],
-      skills: ["React Native", "FastAPI", "SQL Server", "Python", "TensorFlow/Keras", "LangChain/OpenAI API", "Data Visualization", "Postman", "AWS"],
-    },
-    {
-      company: "Midwestern State University",
-      position: "Graduate Teaching Assistant - Web Developer",
-      duration: "Aug 2024 - Dec 2024",
-      location: "Wichita Falls, Texas , USA - 76308",
-      description:
-        "Developed an advanced health analytics solution to predict patient heart-attack risk using machine learning and deep neural networks (DNNs), improving prediction performance through feature engineering, exploratory data analysis, and model optimization.",
-      achievement: [
-        "Established a high-performing logistic regression baseline on 10,000+ patient records using 5-fold cross-validation.",
-        "Improved model precision by ~22% relative to baseline through targeted feature engineering, preprocessing, and hyperparameter tuning.",
-        "Designed and fine-tuned a deep neural network with multiple hidden layers, ReLU activations, dropout, and L2 regularization, achieving robust risk classification performance.",
-        "Applied comprehensive evaluation techniques (confusion matrix, ROC-AUC, classification reports) to validate model reliability and interpretability."
-      ],
-      skills: ["Python", "scikit-learn", "TensorFlow/Keras", "Pandas", "Matplotlib/Seaborn"],
-    },
-    {
-      company: "Cognizant Technology Solutions",
-      position: "Software Engineer",
-      duration: "Aug 2021 - July 2023",
-      location: "Hyderabad, Telangana , India - 500056",
-      description:
-        "Developed and supported enterprise-grade applications with scalable backend APIs and Angular-based UIs, ensuring performance, reliability, and effective collaboration across global teams.",
-
-      achievement: [
-        "Resolved 100+ weekly ServiceNow incidents, reducing P3–P4 resolution times by 40% through root-cause analysis and rapid response.",
-        "Reduced post-release defects by ~98% by expanding automated NUnit test coverage and strengthening pre-release QA processes.",
-        "Optimized backend APIs and SQL queries, reducing response latency and improving system throughput under production load.",
-        "Ensured controlled, high-quality deployments through CI/CD pipelines (Jenkins, TFS) and Agile sprint collaboration.",
-        "Collaborated with DevOps and security teams to integrate Auth0 authentication and Splunk monitoring, strengthening system security and uptime."
-      ],
-      skills: ["NET Core", "Angular", "SQL Server", "NUnit", "Splunk", "Auth0", "Jenkins CI/CD", "TFS", "Jira", "ServiceNow"],
-    },
-    {
-      company: "Cognizant Technology Solutions",
-      position: "Programmer Analyst (Full-Stack Developer)",
-      duration: "Feb 2021 - July 2021",
-      location: "Hyderabad, Telangana , India - 500056",
-      description:
-        "Developed and deployed a full-stack Library Records Management system to automate book tracking, late-fee processing, and reporting, improving operational efficiency and user experience.",
-      achievement: [
-        "Automated late-fee calculations, reducing manual effort and accelerating sprint delivery by ~40%.",
-        "Achieved 95% unit test coverage, cutting post-deployment defects by 40% through robust NUnit testing.",
-        "Optimized frontend performance, reducing Angular page load times by 25% for smoother user experience.",
-        "Maintained 99.9% uptime by deploying Azure-hosted microservices with proactive monitoring and alerting via Splunk."
-      ],
-      skills: ["ASP.NET WebAPI & MVC", "NET Framework", "Angular", "SQL Server", "NUnit", "Azure", "Splunk", "Microservices"]
-    }
-  ];
-
+  {
+    company: "Asuitech Solutions Inc.",
+    position: ".NET Developer",
+    duration: "Aug 2025 - Present",
+    location: "Houston, Texas, USA - 77090",
+    description:
+      "Developing and maintaining enterprise-grade backend services and distributed systems using C#, .NET Core, and ASP.NET Core Web API, with a focus on scalability, data integrity, and operational efficiency across production environments on Azure.",
+    achievement: [
+      "Designed and optimized SQL Server stored procedures and ETL data pipelines, automating data ingestion and validation workflows across 5+ cross-functional teams.",
+      "Integrated ServiceNow for end-to-end incident management, tracking and resolving production issues with structured root cause analysis and corrective action documentation.",
+      "Cut mean time to resolution by 25% through Splunk log correlation, proactive monitoring with OpenTelemetry, and systematic incident retrospectives.",
+      "Deployed and maintained distributed enterprise applications on Azure App Services via CI/CD pipelines using GitHub Actions and Azure DevOps.",
+      "Documented system workflows, API specifications, and runbooks in Confluence and Jira, standardizing best practices across engineering and operations teams."
+    ],
+    skills: [
+      "C#", ".NET Core", "ASP.NET Core Web API", "SQL Server", "Python",
+      "Azure", "Docker", "Kubernetes", "GitHub Actions", "Splunk",
+      "OpenTelemetry", "ServiceNow", "Jira", "Confluence"
+    ]
+  },
+  {
+    company: "Midwestern State University",
+    position: "AI Full Stack Engineer",
+    duration: "Jan 2025 - May 2025",
+    location: "Wichita Falls, Texas, USA - 76308",
+    description:
+      "Led end-to-end design, development, and deployment of SwipeIn — a student-facing dining intelligence platform built in React Native, deployed across web, iOS, and Android. The platform tracks real-time student transactions, meal plans, swipe activity, and flex dollar balances for thousands of campus users, powered by ML forecasting and a generative AI assistant.",
+    achievement: [
+      "Architected and shipped SwipeIn across web, iOS, and Android using React Native, FastAPI, and SQL Server, delivering real-time transaction tracking and role-differentiated dashboards for students, staff, and administrators.",
+      "Built a production RAG assistant using LangChain and OpenAI GPT API with FAISS vector store, automating student dining queries and reducing manual operational interventions by 40%.",
+      "Developed LSTM and ARIMA forecasting models using TensorFlow/Keras and Python, achieving under 8% MAPE for demand prediction and resource optimization.",
+      "Deployed cloud-native infrastructure on AWS (EC2, RDS, S3, Lambda) using Docker, Kubernetes, Terraform, and GitHub Actions CI/CD with real-time monitoring and analytics dashboards.",
+      "Presented SwipeIn at the North Texas Area Student Conference, demonstrating measurable campus impact."
+    ],
+    skills: [
+      "React Native", "FastAPI", "Python", "SQL Server", "TensorFlow/Keras",
+      "LangChain", "OpenAI GPT API", "FAISS", "LSTM", "ARIMA",
+      "AWS", "Docker", "Kubernetes", "Terraform", "GitHub Actions"
+    ]
+  },
+  {
+    company: "Midwestern State University",
+    position: "Machine Learning Engineer",
+    duration: "Aug 2024 - Dec 2024",
+    location: "Wichita Falls, Texas, USA - 76308",
+    description:
+      "Built an end-to-end clinical ML pipeline to predict heart attack risk from 5,000+ patient records using Python, scikit-learn, and TensorFlow/Keras. Deployed the model as a production-ready FastAPI REST API with automated testing, MLflow experiment tracking, and systematic evaluation across 15+ iterations.",
+    achievement: [
+      "Achieved 94.7% predictive accuracy on 5,000+ clinical records through systematic feature engineering, preprocessing, and hyperparameter tuning.",
+      "Improved AUC-ROC by 12% over the logistic regression baseline by designing and fine-tuning a deep neural network with dropout, L2 regularization, and ReLU activations.",
+      "Tracked 15+ model iterations using MLflow for experiment management, model versioning, and performance comparison, enabling reproducible and auditable ML workflows.",
+      "Deployed the trained model as a FastAPI REST API with automated NUnit-style validation pipelines enforcing prediction accuracy and response latency standards.",
+      "Applied comprehensive evaluation techniques including confusion matrices, ROC-AUC curves, and classification reports to validate model reliability and clinical interpretability."
+    ],
+    skills: [
+      "Python", "scikit-learn", "TensorFlow/Keras", "FastAPI",
+      "MLflow", "Pandas", "NumPy", "Matplotlib", "Seaborn",
+      "REST APIs", "NUnit", "AWS SageMaker"
+    ]
+  },
+  {
+    company: "Cognizant Technology Solutions",
+    position: "Software Engineer - .NET Developer",
+    duration: "Aug 2021 - Jul 2023",
+    location: "Hyderabad, Telangana, India - 500056",
+    description:
+      "Developed and supported enterprise insurance backend services for National Life Group, a Fortune 500 life insurer. Owned end-to-end SDLC validation across agent, customer, and plan admin policy systems, ensuring zero-defect production deployments and high data integrity across financial and policyholder data.",
+    achievement: [
+      "Resolved 100+ weekly P1-P4 incidents via ServiceNow, cutting resolution time by 40% through root cause analysis, Splunk log correlation, and structured corrective action documentation.",
+      "Owned end-to-end UAT validation for insurance backend services, signing off every code change before production to ensure zero-defect release cycles.",
+      "Reduced post-deployment defects by 60% by expanding NUnit automated test coverage and strengthening pre-release QA processes across all release cycles.",
+      "Optimized backend APIs and SQL Server stored procedures for multi-table policyholder, payment, and annuity queries, cutting API response times by 25%.",
+      "Integrated Auth0 for multi-portal authentication and Splunk for production monitoring, strengthening system security and achieving 99.9% uptime across insurance platforms."
+    ],
+    skills: [
+      ".NET Core", "C#", "ASP.NET Web API", "Angular", "SQL Server",
+      "NUnit", "Splunk", "Auth0", "Jenkins", "ServiceNow",
+      "Jira", "Confluence", "Azure DevOps"
+    ]
+  },
+  {
+    company: "Cognizant Technology Solutions",
+    position: "Programmer Analyst",
+    duration: "Feb 2021 - Jul 2021",
+    location: "Hyderabad, Telangana, India - 500056",
+    description:
+      "Developed and deployed a full-stack Library Management System using ASP.NET Web API, Angular, and SQL Server with EF Core (Code-First), OAuth 2.0 authentication, and RBAC. Delivered the system with high test coverage, optimized performance, and production-grade reliability.",
+    achievement: [
+      "Achieved 95% NUnit unit test coverage, reducing post-deployment defects by 60% through comprehensive automated testing across all API endpoints and business logic.",
+      "Cut API response times by 25% through SQL query optimization, EF Core tuning, and targeted backend performance improvements.",
+      "Accelerated sprint delivery by 40% by automating financial transaction processing workflows and record update pipelines.",
+      "Maintained 99.9% uptime by deploying on Azure with proactive monitoring and alerting via Splunk across all microservice components.",
+      "Implemented OAuth 2.0 authentication and role-based access control (RBAC), ensuring secure access management across student, librarian, and admin portals."
+    ],
+    skills: [
+      "ASP.NET Web API", "ASP.NET MVC", ".NET Framework",
+      "Angular", "SQL Server", "Entity Framework Core",
+      "OAuth 2.0", "NUnit", "Azure", "Splunk", "Microservices"
+    ]
+  }
+];
  
   return (
     <section
