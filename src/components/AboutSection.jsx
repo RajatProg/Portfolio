@@ -16,7 +16,10 @@ export const AboutSection = () => {
               Full-Stack Software Engineer | AI & .NET Specialist
             </h3>
             <p className="text-muted-foreground">
-              4+ years building production-grade full-stack applications and AI-powered systems across fintech, healthcare, and SaaS domains. I specialize in .NET Core, Python, React Native, and cloud-native infrastructure on AWS and Azure — and I've shipped real products that real users depend on, including a cross-platform dining intelligence platform serving thousands of students and a production RAG assistant that cut operational workload by 40%. I bring engineering depth across the full stack and an AI-first mindset to every problem I work on.
+              4+ years building production systems across fintech, healthcare, and SaaS. 
+  I specialize in .NET Core, Python, and React Native on AWS and Azure. 
+  Most recently shipped SwipeIn, a cross-platform dining platform serving 
+  thousands of students, and a RAG assistant that cut operational workload by 40%.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center">
               <a href="#contact" className="cosmic-button hover:bg-green-600 bg-transparent border-4 border-green-600 hover:text-white">
