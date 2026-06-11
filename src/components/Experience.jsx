@@ -149,7 +149,9 @@ function ExperienceCard({ experience, index }) {
       }}
     >
       {/* Timeline dot */}
-      <div
+      
+      {/* Animate timeline dots*/}
+                  <div
                     className={`absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 shadow-lg z-10 ${
                       visibleItems.includes(index) ? "scale-110" : "scale-0"
                     }`}
@@ -158,8 +160,8 @@ function ExperienceCard({ experience, index }) {
                     <div className="absolute inset-0 bg-green-500 rounded-full"></div>
                     <div className="absolute inset-0 bg-green-400 rounded-full"></div>
                   </div>
-
-
+      
+      
       {/* Card */}
       <div
         className={`ml-20 md:ml-0 md:w-1/2 ${isEven ? "md:pr-12" : "md:pl-12"}`}
