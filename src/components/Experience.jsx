@@ -150,12 +150,15 @@ function ExperienceCard({ experience, index }) {
     >
       {/* Timeline dot */}
       <div
-        className="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-5 h-5 bg-green-500 rounded-full border-4 border-slate-900 z-10"
-        style={{
-          transform: `translateX(-50%) scale(${visible ? 1 : 0})`,
-          transition: `transform 0.3s ease ${index * 120 + 200}ms`,
-        }}
-      />
+                    className={`absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 shadow-lg z-10 ${
+                      visibleItems.includes(index) ? "scale-110" : "scale-0"
+                    }`}
+                    style={{ transitionDelay: `${index * 50 + 100}ms` }}
+                  >
+                    <div className="absolute inset-0 bg-green-500 rounded-full"></div>
+                    <div className="absolute inset-0 bg-green-400 rounded-full"></div>
+                  </div>
+
 
       {/* Card */}
       <div
@@ -263,18 +266,8 @@ export function Experience() {
 
         <div className="max-w-5xl mx-auto">
           <div className="relative">
-            {/* Static timeline line — no animation needed */}<div
-                    className={`absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-slate-900 shadow-lg z-10 ${
-                      visibleItems.includes(index) ? "scale-110" : "scale-0"
-                    }`}
-                    style={{ transitionDelay: `${index * 50 + 100}ms` }}
-                  >
-                    <div className="absolute inset-0 bg-green-500 rounded-full"></div>
-                    <div className="absolute inset-0 bg-green-400 rounded-full"></div>
-                  </div>
-
-
-
+            {/* Static timeline line — no animation needed */}
+            <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 top-0 w-0.5 h-full bg-gradient-to-b from-green-500 via-green-400/60 to-transparent rounded-full" />
 
             {experiences.map((experience, index) => (
               <ExperienceCard
