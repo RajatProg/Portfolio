@@ -195,9 +195,10 @@ function ExperienceCard({ experience, index }) {
             <h4 className="text-xl font-semibold text-green-400 mb-1 group-hover:text-primary transition-colors duration-300">
               {experience.position}
             </h4>
-            <n>
-
-            </n>
+            
+            <br>
+            </br>
+            
             <div className="flex items-center gap-2 text-green-400 text-sm">
               <MapPin className="w-4 h-4" />
               {experience.location}
@@ -217,8 +218,8 @@ function ExperienceCard({ experience, index }) {
             </h5>
             <ul className="space-y-2 text-left">
               {experience.achievement.map((achv, i) => (
-                <li key={i} className="text-sm flex items-start gap-3 text-slate-300 text-align: center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0 text-align: center" />
+                <li key={i} className="text-sm flex items-start gap-3 text-slate-300 text-left">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mt-1.5 flex-shrink-0 text-left" />
                   {achv}
                 </li>
               ))}
